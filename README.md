@@ -1,6 +1,6 @@
 # Queue for OpenVBX
 
-This plugin adds <Enqueue>, <Queue>, <Leave> and <Pause> actions to OpenVBX to allow for call queues and other VBX awesomeness.
+This plugin adds Enqueue, Queue, Leave and Pause actions to OpenVBX to allow for call queues and other VBX awesomeness.
 
 ## Installation
 
