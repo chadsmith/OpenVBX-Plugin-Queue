@@ -1,0 +1,5 @@
+{
+  "name": "Leave",
+  "description": "Leave the queue.",
+  "type": "voice"
+}

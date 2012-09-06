@@ -1,0 +1,5 @@
+{
+  "name": "Pause",
+  "description": "Pause for a specified duration.",
+  "type": "voice"
+}
