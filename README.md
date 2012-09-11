@@ -1,6 +1,6 @@
 # Queue for OpenVBX
 
-This plugin adds Enqueue, Queue, Leave and Pause actions to OpenVBX to allow for call queues and other VBX awesomeness.
+This plugin adds <Enqueue>, <Queue>, <Leave> and <Pause> actions to OpenVBX to allow for call queues and other VBX awesomeness.
 
 ## Installation
 
@@ -35,3 +35,10 @@ Once installed, Enqueue, Queue, Leave and Pause will appear in the OpenVBX sideb
 ### Leaving a Queue
 
 1. Add the Leave applet to your Call flow
+
+### Transferring a Call
+
+1. Click Manage Queue in the OpenVBX sidebar
+2. Click a Queue to view active calls
+3. Select an active call
+4. Select which flow to transfer to
