@@ -14,29 +14,38 @@ if(isset($_POST['sid']) && isset($_POST['flow'])):
       ));
 endif;
 OpenVBX::addJS('queue.js');
-function pluralize($num, $unit) {
-  return $num . ' ' . $unit . ($num != 1 ? 's' : '');
-}
-function relativeTime($time, $ago) {
-  $diff = intval($time);
-  if($diff < 60)
-    return pluralize($diff, 'second');
-  $diff = round($diff / 60);
-  if ($diff < 60)
-    return pluralize($diff, 'minute');
-  $diff = round($diff / 60);
-  if ($diff < 24)
-    return pluralize($diff, 'hour');
-  $diff = round($diff / 24);
-  if ($diff < 7)
-    return pluralize($diff, 'day');
-  $diff = round($diff / 7);
-  if ($diff < 4)
-    return pluralize($diff, 'week');
-  return date('F j, Y', strtotime($time));
+function relativeTime($time) {
+  if(!$time)
+    return '0 seconds';
+  $units = array(
+    'year' => 60 * 60 * 24 * 365,
+    'week' => 60 * 60 * 24 * 7,
+    'day' => 60 * 60 * 24,
+    'hour' => 60 * 60,
+    'minute' => 60,
+    'second' => 1,
+  );
+  $result = array();
+  foreach($units as $unit => $seconds)
+    if($seconds <= $time) {
+      $num = floor($time / $seconds);
+      $time = $time % $seconds;
+      $result[] = $num . ' ' . $unit . ($num != 1 ? 's' : '');
+    }
+  return implode(' ', $result);
 }
 ?>
 <style>
+    .header {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .queue,
+    .call {
+      overflow: hidden;
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
 	.queue span {
 		display: inline-block;
 		float: left;
@@ -49,6 +58,7 @@ function relativeTime($time, $ago) {
 	}
 	.call {
 	  display: none;
+	  background: #ccc;
 	}
 	.call span {
 		display: inline-block;

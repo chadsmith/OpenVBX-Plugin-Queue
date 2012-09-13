@@ -3,10 +3,10 @@
   "author": "Chad Smith <chad@nospam.me>",
   "description": "Applets for enqueueing and dequeueing calls",
   "url": "http://twitter.com/chadsmith",
-	"links" : [{
-		"menu" : "Call Queue",
-		"url" : "queue",
-		"script" : "queue.php",
-		"label" : "Manage Queue"
-	}]
+  "links" : [{
+    "menu" : "admin",
+    "url" : "queue",
+    "script" : "queue.php",
+    "label" : "Call Queues"
+  }]
 }

@@ -1,0 +1,5 @@
+{
+  "name": "Conditional Leave",
+  "description": "Leave the queue if a condition is met.",
+  "type": "voice"
+}

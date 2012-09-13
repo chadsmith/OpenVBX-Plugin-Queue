@@ -1,0 +1,5 @@
+{
+  "name": "Queue Stats",
+  "description": "Tell the caller the current hold time or their position in the queue.",
+  "type": "voice"
+}

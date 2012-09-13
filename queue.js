@@ -1,6 +1,6 @@
 $(function() {
   $('.queue a').click(function() {
-    $(this).parent().parent().siblings('.call').show();
+    $(this).parent().parent().siblings('.call').toggle();
     return false;
   });
   $('select').change(function() {
@@ -15,7 +15,7 @@ $(function() {
         flow: $(this).find('option:selected').val()
       },
       success: function() {
-        $p.hide(500);
+        $p.remove();
       },
       dataType: 'text'
     });
