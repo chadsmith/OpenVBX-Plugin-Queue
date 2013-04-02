@@ -10,7 +10,7 @@ This plugin adds &lt;Enqueue&gt;, &lt;Queue&gt;, &lt;Leave&gt; and &lt;Pause&gt;
 
 ## Usage
 
-Once installed, Enqueue, Queue, Leave and Pause will appear in the applet sidebar along with Queue Stats and Conditional Leave.
+Once installed, Enqueue, Dequeue, Leave and Pause will appear in the applet sidebar along with Queue Stats and Conditional Leave.
 
 Manage Queues from the OpenVBX sidebar or bridge incoming calls using the Queue applet.
 
@@ -23,7 +23,7 @@ Manage Queues from the OpenVBX sidebar or bridge incoming calls using the Queue 
 
 ### Dialing into a Queue
 
-1. Add the Queue applet to your Call flow
+1. Add the Dequeue applet to your Call flow
 2. Enter a Queue name
 3. (Optional) Drop an applet for before the call is connected 
 

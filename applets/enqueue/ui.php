@@ -11,6 +11,6 @@
 	</div>
 	<h2>Next</h2>
 	<div class="vbx-full-pane">
-		<?php echo AppletUI::DropZone('action'); ?>
+		<?php echo AppletUI::DropZone('next'); ?>
 	</div>
 </div>

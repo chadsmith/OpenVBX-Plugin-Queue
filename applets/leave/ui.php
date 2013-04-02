@@ -1,3 +1,3 @@
 <div class="vbx-applet">
-	<h2>Leaves the queue &mdash; <i>Clack</i></h2>
+	<h2>Leaves the queue</h2>
 </div><!-- .vbx-applet -->

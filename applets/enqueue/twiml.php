@@ -1,14 +1,16 @@
 <?php
 $name = AppletInstance::getValue('queue');
 $waitUrl = AppletInstance::getDropZoneUrl('waitUrl');
-$action = AppletInstance::getDropZoneUrl('action');
+$next = AppletInstance::getDropZoneUrl('next');
 
 $options = array();
 if(!empty($waitUrl))
   $options['waitUrl'] = $waitUrl;
-if(!empty($action))
-  $options['action'] = $action;
 
 $response = new TwimlResponse;
 $response->enqueue($name, $options);
+
+if(!empty($next))
+  $response->redirect($next);
+
 $response->respond();

@@ -23,7 +23,7 @@ function relativeTime($time) {
     'day' => 60 * 60 * 24,
     'hour' => 60 * 60,
     'minute' => 60,
-    'second' => 1,
+    'second' => 1
   );
   $result = array();
   foreach($units as $unit => $seconds)

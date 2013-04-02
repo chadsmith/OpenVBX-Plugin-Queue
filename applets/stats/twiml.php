@@ -1,4 +1,10 @@
 <?php
+$ci =& get_instance();
+$prefs = array(
+  'voice' => $ci->vbx_settings->get('voice', $ci->tenant->id),
+  'language' => $ci->vbx_settings->get('voice_language', $ci->tenant->id)
+);
+
 function relativeTime($time) {
   if(!$time)
     return '0 seconds';
@@ -8,7 +14,7 @@ function relativeTime($time) {
     'day' => 60 * 60 * 24,
     'hour' => 60 * 60,
     'minute' => 60,
-    'second' => 1,
+    'second' => 1
   );
   $result = array();
   foreach($units as $unit => $seconds)
@@ -27,7 +33,7 @@ if(!empty($_REQUEST['QueuePosition']))
   $message = str_replace(array('%position%', '%size%', '%time%', '%average%'), array($_REQUEST['QueuePosition'], $_REQUEST['CurrentQueueSize'], relativeTime($_REQUEST['QueueTime']), relativeTime($_REQUEST['AverageQueueTime'])), $message);
 
 $response = new TwimlResponse;
-$response->say($message);
+$response->say($message, $prefs);
 if($next)
   $response->redirect($next);
 $response->respond();
